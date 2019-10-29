@@ -82,16 +82,17 @@ $(document).on("click", "#savenote", function () {
     $.ajax({
       method: "POST",
       url: "/articles/" + thisId,
-      data: {
-        note: " "
-      }
+
     })
       // With that done
       .then(function (data) {
         // Log the response
         console.log("NOTE CLEARED");
-        // Empty the notes section
+        // Empty the comments section
         $("#comments").empty();
+        $("#titleinput").val("");
+        $("#bodyinput").val("");
       });
-  })
-})    
+
+  });
+})
