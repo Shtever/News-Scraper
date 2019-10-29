@@ -30,14 +30,16 @@ app.get("/", function (req, res) {
     var results = [];
     console.log("BINGO BANGO")
 
-    $("h1.mts-article-title").each(function (i, element) {
+    $("article.mts-article-title").each(function (i, element) {
       var title = $(element).children().text();
       var link = $(element).find("a").attr("href");
+      var img =  $(element).children().find("img").attr("src");
       results.push({
         title: title,
-        link: link
+        link: link,
+        img: img
       });
-
+console.log(img)
       // Create a new Article using the `result` object built from scraping
       db.Article.create(results)
         .then(function (dbArticle) {
