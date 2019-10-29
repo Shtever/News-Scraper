@@ -1,4 +1,5 @@
 # News Scraper
+## Stephen McMillen
 ## **All the news that's fit to scrape**
 
 ***The following elements have been used in creating this homework:***
