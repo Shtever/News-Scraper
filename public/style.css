@@ -4,10 +4,15 @@ body {
 
 #articles {
     float: left;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.5vw;
 }
 
 #comments {
     color: red;
+    font-family: 'Staatliches', cursive;
+    font-size: 1vw;
+
 }
 
 #title, #subtitle {
@@ -26,4 +31,17 @@ body {
     font-family: 'Staatliches', cursive;
     font-size: 4vw;
     line-height: 0.8;
+}
+
+.url, .headline {
+    margin: 0;
+    line-height: 1;
+}
+.url {
+    margin: 0;
+font-size: 1vw;
+}
+
+.headline{
+    color: royalblue;
 }

@@ -5,6 +5,8 @@ var mongoose = require("mongoose");
 var cheerio = require("cheerio");
 var axios = require("axios");
 var logger = require("morgan");
+var MONGOD_URI = process.env.MONGOD_URI || "mongodb://localhost/News-Scraper"
+
 
 //require items in models folder//
 var db = require("./models");
