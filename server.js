@@ -1,5 +1,6 @@
 //NPM package requirements//
 var express = require("express");
+var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 var cheerio = require("cheerio");
 var axios = require("axios");
@@ -11,6 +12,9 @@ var PORT = 3000;
 
 //Exptress//
 var app = express();
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 
 // Boilerplate stuff for json
 app.use(logger("dev"));
@@ -19,7 +23,6 @@ app.use(express.json());
 
 // Default folder
 app.use(express.static("public"));
-
 // Mongo DB 
 mongoose.connect("mongodb://localhost/News-Scraper", { useNewUrlParser: true });
 
