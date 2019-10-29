@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,19 @@
     <link rel="stylesheet" href="./style.css">
     <title>News Scraper</title>
 </head>
+
 <body>
     <div id="container">
         <h1 id="title">TITLE</h1>
         <h2 id="subtitle">SUBTITLE</h2>
-        <div id="articles"></div>
-        <div id="comments"></div>
+        <div class="row">
+            <div class="col-xl-8" id="articles"></div>
+            <div class="col-xl-4" id="comments"></div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -98,6 +98,24 @@ app.post("/articles/:id", function (req, res) {
     })
 });
 
+app.delete("/articles/:id", function (req, res) {
+  // TODO
+  // ====
+  // save the new note that gets posted to the Notes collection
+  // then find an article from the req.params.id
+  // and update it's "note" property with the _id of the new note
+  db.Note.remove(req.body)
+    .then(function (dbArticle) {
+      return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbArticle._id }, { new: true });
+    })
+    .then(function (results) {
+      res.json(results);
+    })
+    .catch(function (err) {
+      res.json(err);
+    })
+});
+
 // Start the server
 app.listen(PORT, function () {
   console.log("App running http://localhost:" + PORT);
